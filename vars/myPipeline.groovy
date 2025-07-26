@@ -1,12 +1,4 @@
-def call() {
-    pipeline {
-        agent any
-        stages {
-            stage('Shared Library Stage') {
-                steps {
-                    echo '✅ Executing from shared library!'
-                }
-            }
-        }
-    }
+#!/usr/bin/env groovy
+def call(String name = 'human') {
+  echo "Hello, ${name}."
 }
